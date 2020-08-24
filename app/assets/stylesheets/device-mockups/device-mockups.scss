@@ -45,7 +45,7 @@
 		width: 100%; height: 100%;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
-		background-image: url("macbook/macbook.png");
+		background-image: url("/macbook/macbook.png");
 	}
 
 		.device-mockup > .device > .screen {
@@ -314,30 +314,30 @@
 .device-mockup.iphone6_plus > .device,
 .device-mockup.iphone6_plus.black > .device,
 .device-mockup.iphone6_plus.portrait.black > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_black_port.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_black_port.png");
 }
 
 .device-mockup.iphone6_plus.landscape > .device,
 .device-mockup.iphone6_plus.landscape.black > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_black_land.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_black_land.png");
 }
 
 .device-mockup.iphone6_plus.white > .device,
 .device-mockup.iphone6_plus.portrait.white > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_white_port.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_white_port.png");
 }
 
 .device-mockup.iphone6_plus.landscape.white > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_white_land.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_white_land.png");
 }
 
 .device-mockup.iphone6_plus.gold > .device,
 .device-mockup.iphone6_plus.portrait.gold > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_gold_port.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_gold_port.png");
 }
 
 .device-mockup.iphone6_plus.landscape.gold > .device {
-	background-image: url("iphone_6_plus/iphone_6_plus_gold_land.png");
+	background-image: url("./iphone_6_plus/iphone_6_plus_gold_land.png");
 }
 
 .device-mockup.iphone6_plus > .device > .screen,

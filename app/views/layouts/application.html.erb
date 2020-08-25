@@ -3,6 +3,7 @@
   <head>
     <title>Sample</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag('favicon.ico') %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,5 +12,6 @@
 
   <body>
     <%= yield %>
+    <script src="../assets/new-age.js"></script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<h4 class="page-title text-center">内容の確認</h4>
+
+<%= form_with(model: @blog, local: true, url: blogs_path) do |form| %>
+<div class="confirm-contents text-center">
+  <div class="blog_content">
+    <%= form.hidden_field :content %>
+  </div>
+  <br>
+  <div class="confirm_content">
+    <%= @blog.content %>
+  </div>
+  <br>
+  <%= form.submit "新規作成", class: "buttons" %>
+  <br>
+  <%= form.submit '戻る', name: 'back', class: "buttons" %>
+  <br>
+</div>
+<% end %>

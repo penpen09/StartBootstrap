@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user
+  before_action :check_blog, only: [:edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   # GET /blogs/new
@@ -25,8 +26,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
-
+    @blog = current_user.blogs.build(blog_params)
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
@@ -36,6 +36,10 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
+  end
+  def confirm
+    @blog = current_user.blogs.build(blog_params)
+    render :new if @blog.invalid?
   end
 
   # PATCH/PUT /blogs/1
@@ -66,6 +70,10 @@ class BlogsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.find(params[:id])
+    end
+    def check_blog
+      If @current_user != @blog.user
+      redirect_to blogs_path, notice: '権限がありません'
     end
 
     # Only allow a list of trusted parameters through.
